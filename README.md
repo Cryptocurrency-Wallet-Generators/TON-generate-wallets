@@ -1,33 +1,32 @@
-# TON Wallet Generator
+# TON Generate Wallets
 
-This tool generates multiple TON (The Open Network) wallets with mnemonic phrases, private keys, and addresses. The generated wallets are saved to a JSON file for easy access.
+This repository allows you to generate 50 TON wallets along with their associated 24-word secret phrases.
 
-## Prerequisites
+## Setup Instructions
 
-- Node.js and npm installed on your system
+### 1. Fork the Repository
+Fork this repository to your own GitHub account.
 
-## Installation
+### 2. Configure Repository Visibility
+1. Navigate to **Settings**.
+2. Scroll down to **Change repository visibility**.
+3. Set the visibility to **Private**.
 
-1. Clone this repository or download the script.
-2. Run `npm install` to install the required dependencies.
+### 3. Adjust Workflow Permissions
+1. Go to **Settings** > **Actions** > **General**.
+2. Scroll down to **Workflow permissions**.
+3. Select **Read and write permissions**.
+4. Click **Save**.
 
-## Usage
+### 4. Run the Workflow
+1. Navigate to **Actions** > **Generate TON Wallets**.
+2. Click the **Run Workflow** dropdown.
+3. Select **Run Workflow** to generate the wallets.
 
-1. Run the script with `node generate_wallets.js`.
-2. The script will generate 50 TON wallets by default.
-3. Wallet information (address, private key, and mnemonic phrase) will be saved to `ton_wallets.json`.
-
-## Output Format
-
-The generated `ton_wallets.json` file will contain an array of wallet objects, each with the following properties:
-- `address`: The TON wallet address
-- `privateKey`: The private key in hexadecimal format
-- `mnemonic`: The 24-word mnemonic phrase for wallet recovery
-
-## Disclaimer
-
-This tool is for educational and testing purposes only. Always secure your private keys and mnemonic phrases, and do not share them with anyone. Use at your own risk.
+### The wallets and secrets will be saved in the file `ton_wallets.json`.
 
 ## License
+This project is licensed under the terms of the [MIT License](LICENSE.txt).
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+## Notes
+- Ensure your repository is set to **Private** to maintain the security of the generated wallets and secret phrases.
