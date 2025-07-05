@@ -1,41 +1,33 @@
-# Telegram Generate Wallets
+# TON Wallet Generator
 
-This repository allows you to generate 50 Telegram wallets along with their associated 24-word secret phrases, API credentials, and authentication keys.
+This tool generates multiple TON (The Open Network) wallets with mnemonic phrases, private keys, and addresses. The generated wallets are saved to a JSON file for easy access.
 
-## Setup Instructions
+## Prerequisites
 
-### 1. Fork the Repository
-Fork this repository to your own GitHub account.
+- Node.js and npm installed on your system
 
-### 2. Configure Repository Visibility
-1. Navigate to **Settings**.
-2. Scroll down to **Change repository visibility**.
-3. Set the visibility to **Private**.
+## Installation
 
-### 3. Adjust Workflow Permissions
-1. Go to **Settings** > **Actions** > **General**.
-2. Scroll down to **Workflow permissions**.
-3. Select **Read and write permissions**.
-4. Click **Save**.
+1. Clone this repository or download the script.
+2. Run `npm install` to install the required dependencies.
 
-### 4. Run the Workflow
-1. Navigate to **Actions** > **Generate Telegram Wallets**.
-2. Click the **Run Workflow** dropdown.
-3. Select **Run Workflow** to generate the wallets.
+## Usage
 
-### The wallets and secrets will be saved in the file `telegram_wallets.json`.
+1. Run the script with `node generate_wallets.js`.
+2. The script will generate 50 TON wallets by default.
+3. Wallet information (address, private key, and mnemonic phrase) will be saved to `ton_wallets.json`.
 
-## About Telegram Wallets
-Each generated wallet includes:
-- Wallet ID: A unique identifier for the wallet
-- API ID and API Hash: Simulated API credentials (similar to what you would get from Telegram)
-- Phone ID: A unique phone number-like identifier 
-- Auth Key: An authentication key used in the MTProto protocol
-- Mnemonic: A 24-word secret phrase for wallet recovery
+## Output Format
+
+The generated `ton_wallets.json` file will contain an array of wallet objects, each with the following properties:
+- `address`: The TON wallet address
+- `privateKey`: The private key in hexadecimal format
+- `mnemonic`: The 24-word mnemonic phrase for wallet recovery
+
+## Disclaimer
+
+This tool is for educational and testing purposes only. Always secure your private keys and mnemonic phrases, and do not share them with anyone. Use at your own risk.
 
 ## License
-This project is licensed under the terms of the [MIT License](LICENSE.txt).
 
-## Notes
-- Ensure your repository is set to **Private** to maintain the security of the generated wallets and secret phrases.
-- These are simulated Telegram wallets for development and testing purposes.
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
